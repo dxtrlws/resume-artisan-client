@@ -2,7 +2,19 @@ import React, {Component} from 'react';
 
 
 class Header extends Component {
+  onLoginClick(){
+    this.props.onLoginClick();
+  }
+  onLogoutClick(){
+    this.props.onLogoutClick();
+  }
   render() {
+    let navItems;
+    if (this.props.idToken) {
+      navItems = <li><a className="sign-up" href="#" onClick={this.onLogoutClick.bind(this)}>Logout</a></li> 
+    }else {
+      navItems = <li><a className="sign-up" href="#" onClick={this.onLoginClick.bind(this)}>Login</a></li> 
+    }
     return (
         <nav className="navbar navbar-default">
           <div className="container">
@@ -22,8 +34,7 @@ class Header extends Component {
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
-                <li><a className="sign-up" href="/signup">Sign Up</a></li> 
-                <li><a href="/login">Login</a></li>
+                {navItems}
               </ul>
             </div>
           </div>
