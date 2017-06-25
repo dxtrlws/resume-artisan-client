@@ -1,23 +1,33 @@
-import React, { Component } from 'react';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {Component} from 'react';
+
 
 class Header extends Component {
   render() {
     return (
-      <div className="App">
-        <Navbar>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    Resume Artisan
-                </Navbar.Brand>
-            </Navbar.Header>
-            <Nav>
-                <NavItem><a href="#">Login</a></NavItem>
-                <NavItem><a href="#">Sign Up</a></NavItem>
-            </Nav>
-        </Navbar>
-      </div>
+        <nav className="navbar navbar-default">
+          <div className="container">
+            <div className="navbar-header">
+              <button
+                type="button"
+                className="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="/">Resume Artisan</a>
+            </div>
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul className="nav navbar-nav navbar-right">
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     );
   }
 }
