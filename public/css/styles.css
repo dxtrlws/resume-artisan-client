@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-nav>li>a:visited {
-  color: #fff;
+  color: #fff !important;
 }
 
 /*.navbar-nav>li>a:hover {

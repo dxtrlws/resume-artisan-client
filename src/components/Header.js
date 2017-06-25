@@ -11,9 +11,9 @@ class Header extends Component {
   render() {
     let navItems;
     if (this.props.idToken) {
-      navItems = <li><a className="sign-up" href="#" onClick={this.onLogoutClick.bind(this)}>Logout</a></li> 
+      navItems = <li><a href="#" onClick={this.onLogoutClick.bind(this)}>Logout</a></li> 
     }else {
-      navItems = <li><a className="sign-up" href="#" onClick={this.onLoginClick.bind(this)}>Login</a></li> 
+      navItems = <li><a href="#" onClick={this.onLoginClick.bind(this)}>Login / Sign Up</a></li> 
     }
     return (
         <nav className="navbar navbar-default">
